@@ -1,12 +1,11 @@
-﻿'use strict';
+'use strict';
 
 const dbName = 'ShahzodData';
 const keyN = 'settlementsTable';
-const site = 'http://webnar/site/paymentList2';
-//const pageSize = 20000;
+const site = 'http://some_internal_page';
 const pageSize = 18000;
 
-if (document.location.href === "http://webnar/#/") {
+if (document.location.href === "http://abcdef/#/") {
 
 	window.setTimeout(banklarNomi, 6000);
 
@@ -57,9 +56,8 @@ if (document.location.href === "http://webnar/#/") {
             var timerValue = document.querySelector('#timerBranchRemainder span').innerText;
             var timerSeconds = timerValue.substring(0, 2) * 60 + parseInt(timerValue.substring(3,));
             var refreshTime = timerSeconds * 1000 + 1000;
-            
-//            console.log(timerValue);
-            window.setTimeout(banklarNomi, refreshTime);
+
+	    window.setTimeout(banklarNomi, refreshTime);
 
             //Kerakli jadvalni tanlash
             ChartRemainder = document.getElementById('contentChartRemainder');
@@ -460,14 +458,3 @@ function getSettlementsArr(responseContents) {
     return TotalArr;
 }
 
-//**********************Not used**********************************
-function sanaVaqt() {
-  var t = new Date();
-  var year = t.getFullYear();
-  var day = t.getDate() > 9 ? t.getDate() : '0' + t.getDate();
-  var month = t.getMonth() + 1 > 9 ? t.getMonth() + 1 : '0' + (t.getMonth() + 1);
-//  var hour = t.getHours() > 9 ? t.getHours() : '0' + t.getHours();
-//  var minute = t.getMinutes() > 9 ? t.getMinutes() : '0' + t.getMinutes();
-
-  return day + '.' + month + '.' + year //+ '_' + hour + '-' + minute;
-}
