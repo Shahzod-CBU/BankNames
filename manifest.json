@@ -2,7 +2,7 @@
 {
 "manifest_version": 2,
     "name": "Import settlements",
-    "description": "Adding names of banks to the number of settlement center and download all transactions as csv file",
+    "description": "Add names of banks to the number of settlement center and download all transactions as csv file",
 	"offline_enabled": true,
 	"permissions": [
         "alarms",
