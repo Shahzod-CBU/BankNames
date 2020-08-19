@@ -1,0 +1,31 @@
+
+{
+"manifest_version": 2,
+    "name": "Import settlements",
+    "description": "Adding names of banks to the number of settlement center and download all transactions as csv file",
+	"offline_enabled": true,
+	"permissions": [
+        "alarms",
+        "unlimitedStorage",
+        "storage"
+    ],
+	"optional_permissions": [
+        "background"
+	],
+    "version": "3.3",
+	"author": "Shahzod Mahmudov, 10.04.2019",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://webnar/"
+            ],
+			"css": [
+				"styles.css"
+			],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
